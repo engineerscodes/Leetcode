@@ -17,6 +17,7 @@ public class movezeros
 		this.size=size;
 		
 	}
+  
  public static void move()
  { List<Integer> n1=new ArrayList<Integer>();
    
@@ -25,10 +26,18 @@ public class movezeros
 	   n1.add(n[i]);
    }
    Iterator i=n1.iterator();
+   int count=0;
+  /* while(i.hasNext())
+   {
+	   if(i.next().equals(0))
+		   n1.remove(count);   ///Exception in thread "main" java.util.ConcurrentModificationException
+	   count++;
+   }''''*/
    while(i.hasNext())
    {
 	   if(i.next().equals(0))
-		   i.remove();
+		   i.remove();   ///Exception in thread "main" java.util.ConcurrentModificationException
+	   count++;
    }
   
   int sub=n.length-n1.size();
