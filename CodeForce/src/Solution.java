@@ -1,32 +1,16 @@
 class Solution {
-    public int reverse(int x) 
+	String temp="";
+    public boolean reverse(int x) 
     {   
-        int sum=0;
-        int n,num=x;
-     
-      if(x>0)
-     {   
-         while(num>0)
-         {
-             n=num%10;
-             sum=sum*10+n;
-             num=num/10;
-         }
-         return sum;
-    }
+    	String t= x+"";
+        String str[]=t.split(""); 
+        for(String c:str)
+            temp=c+temp;
+    System.out.println(temp);
+    if(t.equals(temp))
+        return true;
     else
-    {   
-        x=Math.abs(x);
-        int r,q,sum2=0;
-        q=x;
-        while(q>0)
-        {
-            r=q%10;
-            sum2=sum2*10+r;
-            q=q/10;
-        }
-        return ((sum2)*(-1));
-    }
+        return false;
     
     }
    
@@ -34,7 +18,7 @@ class Solution {
     public static void main(String ...arg)
     {
     	Solution n=new Solution();
-    	int d=n.reverse(-2147483412);
+    	boolean d=n.reverse(2147483647);
     	System.out.println(d);
     }
 }
