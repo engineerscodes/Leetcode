@@ -17,6 +17,11 @@ public class AP_slices
 	}
    public void input()
    {  int d=0;
+   String x="101";
+           Integer f=Integer.parseInt(x,2);
+         System.out.println("============"+f);
+       
+        
 	   for(int i=0;i<array.length;i++)
 		   array[i]=nav.nextInt();
 	   System.out.println(Arrays.toString(array));
